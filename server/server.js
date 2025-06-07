@@ -1,3 +1,8 @@
+// Health Check Route in render
+app.get("/healthz", (req, res) => {
+  res.status(200).send("OK");
+});
+
 require("dotenv").config();
 
 const express = require("express");
