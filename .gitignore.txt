@@ -1,0 +1,18 @@
+# Node modules (very large and should never be committed)
+node_modules/
+
+# Environment variables (sensitive info)
+.env
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+
+# Optional: Ignore build folders (if using React or Vite etc.)
+client/build/
+dist/
+
+# Optional: Ignore temp files
+*.tmp
