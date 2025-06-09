@@ -64,7 +64,7 @@ app.get("/", (req, res) => {
     if (req.session.userId) {
         return res.sendFile(path.join(__dirname, "dashboard.html"));
     }
-    res.sendFile(path.join(__dirname, "login.html"));
+    res.sendFile(path.join(__dirname, "client/login.html"));
 });
 
 // User Schema
