@@ -33,10 +33,10 @@ app.use(express.static(__dirname));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(cookieParser());
 
-// MongoDB Connection
-mongoose.connect(process.env.MONGO_URL)
-    .then(() => console.log("MongoDB Connected"))
-    .catch((err) => console.log(err));
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/yourdbname';
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("MongoDB connected"))
+  .catch(err => console.log(err));
 
 // Session Configuration with MongoStore
 app.use(
