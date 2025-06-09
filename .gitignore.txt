@@ -1,5 +1,6 @@
 # Node modules (very large and should never be committed)
-node_modules/
+/server/node_modules/
+
 
 # Environment variables (sensitive info)
 .env

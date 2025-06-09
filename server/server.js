@@ -1,7 +1,4 @@
-// Health Check Route in render
-app.get("/healthz", (req, res) => {
-  res.status(200).send("OK");
-});
+
 
 require("dotenv").config();
 
@@ -20,6 +17,11 @@ const cookieParser = require("cookie-parser");
 const MongoStore = require("connect-mongo");
 
 const app = express();
+
+// Health Check Route in render
+app.get("/healthz", (req, res) => {
+  res.status(200).send("OK");
+});
 
 // Middleware
 app.use(express.json());
